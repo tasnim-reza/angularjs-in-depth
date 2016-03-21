@@ -2,7 +2,7 @@
  * Created by Reza on 20-3-16.
  */
 
-
+/*controller example*/
 function BaseController(){
     this.base = function(msg){
         return 'From base ' + msg;
@@ -37,6 +37,9 @@ function ControllerB($scope){
 ControllerB.prototype = baseCtrl;
 
 app.controller('ctrlb', ControllerB);
+
+
+/*service example*/
 
 function BaseService(){
     this.sayFromBase = function(msg){
