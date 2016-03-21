@@ -1,2 +1,2 @@
 # angularjs-in-depth
-working with angularjs, we did lots of hack ! lets see how it will be
+working with angularjs, we did couple of hacks ! may be it will helps you too
