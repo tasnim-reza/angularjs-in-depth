@@ -2,15 +2,16 @@
  * Created by Reza on 26-Mar-16.
  */
 app.controller('scriptInsideTemplateCtrl', function($scope){
-    $scope.$on('$includeContentLoaded', function(){
-        console.log('directive');
-    })
+
 });
+
 app.directive('templateWithScript', function(){
     return{        
-        link: function (element, scope) {
+        link: function (scope, element) {
             scope.$on('$includeContentLoaded', function(){
-                console.log('directive');
+                var script = document.createElement('script');
+                script.innerHTML = element[0].innerHTML; //have to be careful regarding innerHtml
+                document.body.appendChild(script);
             })
 
         }
