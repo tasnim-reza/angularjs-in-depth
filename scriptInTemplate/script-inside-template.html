@@ -3,3 +3,29 @@
     <p class="blog-post-meta">January 1, 2014 by <a href="#">Reza</a></p>
     <div ng-include=" 'scriptInTemplate/template.html'"></div>
 </div>
+    <h1>Script inside Angular Template</h1>
+    <pre>
+        //your script tag
+        < script template-with-script>
+            console.log('from tpl');
+            alert('from template')
+        < /script>
+
+        //Directive looks like
+        app.directive('templateWithScript', function(){
+            return{
+                link: function (scope, element) {
+                    scope.$on('$includeContentLoaded', function(){
+                        var script = document.createElement('script');
+                        script.innerHTML = element[0].innerHTML; //have to be careful regarding innerHtml
+                        document.body.appendChild(script);
+                    })
+
+                }
+            }
+        })
+    </pre>
+
+    <div ng-include=" 'scriptInTemplate/template.html'"></div>
+</div>
+
