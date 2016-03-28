@@ -1,0 +1,53 @@
+{
+  "name": "angularjs-in-depth",
+  "version": "0.0.1",
+  "description": "AngularJs tricks",
+  "author": "Tasnim Reza <reza5619@gmail.com>",
+  "contributors": [{
+    "name": "Tasnim Reza",
+    "email": "reza5619@gmail.com"
+  }],
+  "bin": {
+
+  },
+  "scripts": {
+     "serve": "http-server"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tasnim-reza/angularjs-in-depth"
+  },
+  "bugs": {
+    "url": "https://github.com/tasnim-reza/angularjs-in-depth/issues"
+  },
+  "keywords": [
+    "angularjs",
+    "tips",
+    "trick"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.x",
+    "angular": "~1.x",
+    "jquery": "~1.x"
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-jshint": "*",
+    "gulp-concat": "*",
+    "gulp-rename": "*",
+    "gulp-uglify": "*",
+
+    "bootstrap": "~3.x",
+    "angular": "~1.x",
+    "jquery": "~1.x"
+  },
+  "preferGlobal": true,
+  "private": true,
+  "publishConfig": {
+    "registry": "http://tasnim-reza.github.io/angularjs-in-depth/"
+  },
+
+
+  "license": "MIT"
+}
