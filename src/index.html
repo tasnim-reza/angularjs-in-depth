@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <title></title>
     <meta>
-    <link rel="icon" href="site/favicon.ico" >
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="site/site.css" />
+    <link rel="icon" href="img/favicon.ico" >
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/site.css" />
+    <!-- endinject -->
 </head>
 <body>
 <!-- Fixed navbar -->
@@ -24,10 +26,10 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active">
-                    <a href="#" ng-click="template='inheritance/inheritance.html'">Inheritance</a>
+                    <a href="#" ng-click="template='views/inheritance/inheritance.html'">Inheritance</a>
                 </li>
                 <li>
-                    <a href="#" ng-click="template='scriptInTemplate/script-inside-template.html'">script-inside-template</a>
+                    <a href="#" ng-click="template='views/scriptInTemplate/script-inside-template.html'">script-inside-template</a>
                 </li>
                 <li>
                     <a href="#contact">Contact</a>
@@ -169,16 +171,17 @@
         <a href="#">Back to top</a>
     </p>
 </footer>
+<!-- inject:js -->
+<script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-<script type="text/javascript" src="node_modules/angular/angular.js"></script>
+<script type="text/javascript" src="../node_modules/angular/angular.js"></script>
 
 
 <script type="text/javascript" src="app.js"></script>
-<script type="text/javascript" src="inheritance/inheritance.js"></script>
-<script type="text/javascript" src="scriptInTemplate/script-inside-template.js"></script>
+<script type="text/javascript" src="views/inheritance/inheritance.js"></script>
+<script type="text/javascript" src="views/scriptInTemplate/script-inside-template.js"></script>
+<!-- endinject -->
 </body>
 </html>
 

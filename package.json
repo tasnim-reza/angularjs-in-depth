@@ -37,6 +37,8 @@
     "gulp-concat": "*",
     "gulp-rename": "*",
     "gulp-uglify": "*",
+    "gulp-inject": "*",
+    "stream-series": "*",
 
     "bootstrap": "~3.x",
     "angular": "~1.x",
