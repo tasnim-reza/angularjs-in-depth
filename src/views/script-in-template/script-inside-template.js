@@ -1,11 +1,11 @@
 /**
  * Created by Reza on 26-Mar-16.
  */
-app.controller('scriptInsideTemplateCtrl', function($scope){
+app.controller('scriptInsideTemplateCtrl', ['$scope', function($scope){
 
-});
+}]);
 
-app.directive('templateWithScript', function(){
+app.directive('templateWithScript', [function(){
     return{        
         link: function (scope, element) {
             // scope.$on('$includeContentLoaded', function(){
@@ -16,4 +16,4 @@ app.directive('templateWithScript', function(){
 
         }
     }
-})
+}])

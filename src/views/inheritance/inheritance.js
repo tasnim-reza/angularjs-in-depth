@@ -25,7 +25,8 @@ function ControllerA($scope, servicea){
 
 ControllerA.prototype = baseCtrl;
 
-app.controller('ctrla', ControllerA);
+app.controller('ctrla', ['$scope', 'servicea', ControllerA]);
+
 
 function ControllerB($scope){
     var self = this;
@@ -36,7 +37,7 @@ function ControllerB($scope){
 
 ControllerB.prototype = baseCtrl;
 
-app.controller('ctrlb', ControllerB);
+app.controller('ctrlb', ['$scope', ControllerB]);
 
 
 /*service example*/
