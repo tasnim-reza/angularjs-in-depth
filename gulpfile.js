@@ -10,7 +10,7 @@ var jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
 
-    streamSeries = require('stream-series'),
+    streamSeries = require('stream-series');
     inject = require('gulp-inject');
 
 

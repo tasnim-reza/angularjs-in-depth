@@ -16,7 +16,7 @@
         <h1 class="blog-title text-center">AngularJS in depth</h1>
     </div>
     <div class="row">
-        <div class="col-sm-8 blog-main" ng-controller="BlogContainerCtrl">
+        <div class="col-sm-8 blog-main" ng-controller="BlogContainerCtrl" route-change-on-scroll>
             <div class="blog-post" ng-view></div>
 
 <!--            <div class="blog-post">
@@ -138,6 +138,7 @@
         <a href="#">Back to top</a>
     </p>
 </footer>
+
 <!-- inject:js -->
 <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

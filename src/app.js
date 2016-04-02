@@ -23,7 +23,28 @@ app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.otherwise('/')
 }])
 
-app.controller('BlogContainerCtrl', ['$scope', function ($scope) {
+app.controller('BlogContainerCtrl', ['$scope', '$route', function ($scope, $route) {
     $scope.templateUrl = 'views/inheritance/inheritance.html';
 
+
+}])
+app.directive('routeChangeOnScroll', ['$route', '$location', function ($route, $location) {
+    return{
+        link: function(scope, element, attrs){
+            scope.$on('$routeChangeSuccess', function () {
+                var currentElementHeight = document.getElementsByClassName('blog-post')[0].scrollHeight;
+                var routes = Object.keys($route.routes).filter(function(item){
+                    return (item !== '' && item != 'null');
+                });
+
+                setTimeout(function(){
+                    window.onscroll = function(){
+                        if( (window.scrollY + window.innerHeight) >= currentElementHeight) {
+                            console.log('call', $route, $location)
+                        }
+                    }
+                },100)
+            })
+        }
+    }
 }])
