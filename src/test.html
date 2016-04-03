@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{ height: 500px}
+    </style>
+
+</head>
+<body>
+<div id="blogpost" style="border: solid;"></div>
+<script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+    var elmH = 0;
+    function loadMore()
+    {
+        console.log('load more');
+
+        var div = $('<div>')[0];
+        div.innerHtml = '1';
+        div.style= "border: solid;margin:5px;";
+
+        $("body").append(div);
+        elmH = div.scrollHeight;
+
+        $(window).bind('scroll', bindScroll);
+    }
+
+    function bindScroll(){
+        //console.log(window.scrollY + window.innerHeight)
+        //console.log($(window).scrollTop() + $(window).height())
+
+//        console.log($('#blogpost').height() - 100)
+//        console.log(document.getElementById('blogpost').scrollHeight-100);
+        if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+
+            $(window).unbind('scroll');
+            loadMore();
+        }
+    }
+
+    $(window).scroll(bindScroll);
+</script>
+</body>
+</html>
