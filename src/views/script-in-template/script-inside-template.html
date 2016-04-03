@@ -1,6 +1,6 @@
 <div ng-controller="scriptInsideTemplateCtrl">
     <h3 class="blog-post-title">Script inside Angular Template</h3>
-    <p class="blog-post-meta">January 1, 2014 by <a href="#">Reza</a></p>
+    <p class="blog-post-meta">{{ routeData[location.url].date }} by <a href="#">Reza</a></p>
 
     <p>By default AngularJs doesn't support script inside template.
         To achieve this feature we can write a simple directive

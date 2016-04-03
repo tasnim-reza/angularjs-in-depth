@@ -16,8 +16,8 @@
         <h1 class="blog-title text-center">AngularJS in depth</h1>
     </div>
     <div class="row">
-        <div class="col-sm-8 blog-main" ng-controller="BlogContainerCtrl" route-change-on-scroll>
-            <div class="blog-post" ng-view></div>
+        <div class="col-sm-8 blog-main" route-change-on-scroll>
+            <div class="blog-post" ng-controller="BlogContainerCtrl" ng-view></div>
 
 <!--            <div class="blog-post">
                 <h2 class="blog-post-title">Sample 1</h2>
@@ -117,8 +117,9 @@
             <div class="sidebar-module">
                 <h4>Archives</h4>
                 <ol class="list-unstyled">
-                    <li><a href="#/script-in-template">31 March 2016</a></li>
-                    <li><a href="#/">30 March 2016</a></li>
+                    <li ng-repeat="(key, value) in routeData">
+                        <a href="#{{key}}">{{value.date}}</a>
+                    </li>
                 </ol>
             </div>
             <div class="sidebar-module">
@@ -130,8 +131,7 @@
             </div>
         </div>
     </div>
-
-</div><!-- /.container -->
+</div>
 <footer class="blog-footer">
     <p>Blog template inspired by <a href="http://getbootstrap.com">Bootstrap</a></p>
     <p>
@@ -145,6 +145,7 @@
 
 <script type="text/javascript" src="../node_modules/angular/angular.js"></script>
 <script type="text/javascript" src="../node_modules/angular-route/angular-route.js"></script>
+
 
 
 <script type="text/javascript" src="app.js"></script>
